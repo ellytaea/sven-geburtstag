@@ -2,58 +2,45 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Geburtstagsrätsel für meinen Schatz Sven zum 50.</title>
+  <title>Geburtstagsrätsel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      padding: 30px;
+      padding: 0;
       background: #222;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       color: #fff;
       display: flex;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
-    .wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: center; /* → vertikal zentriert */
-      gap: 40px;
-      flex-wrap: wrap;
-      max-width: 1200px;
+    .container {
+      position: relative;
+      display: inline-block;
     }
 
-    .image-container img {
+    img {
+      width: 100%;
       max-width: 90vw;
-      max-height: 80vh;
       height: auto;
+      display: block;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     }
 
-    .text-container {
-      max-width: 400px;
-      padding-left: 20px;
-    }
-
-    .text-container h1 {
-      font-size: 1.8em;
-      margin-top: 0;
-    }
-
-    .text-container p {
-      font-size: 1em;
-      line-height: 1.5em;
-    }
-
     button {
-      margin-top: 20px;
-      padding: 12px 20px;
+      position: absolute;
+      bottom: 50px;
+      left: 50px;
+      padding: 12px 24px;
       font-size: 1rem;
-      background-color: #b22222; /* Weinrot */
+      font-family: Arial, sans-serif;
+      background-color: #b22222;
       color: white;
       border: none;
-      border-radius: 25%;
+      border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
@@ -64,45 +51,24 @@
 
     .lösung {
       display: none;
+      margin-top: 20px;
       background: #333;
       padding: 15px;
       border-radius: 5px;
-      margin-top: 20px;
       max-width: 400px;
       text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .text-container {
-        padding-left: 0;
-        text-align: center;
-      }
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="image-container">
-      <img src="HerzPuzzle.png" alt="Geburtstagsrebus" />
-    </div>
-    <div class="text-container">
-      <h1>🎁 Geburtstagsrätsel für meinen Schatz Sven zum 50.</h1>
-      <p>
-        Hallo Schatzi, kannst du herausfinden, was sich hier in zwei Rätseln versteckt?<br>
-        Nutze deine Brille, denk kreativ – und drück am Ende den Button für die Lösung.<br><br>
-        <strong>Aber nicht schummeln! 😉</strong>
-      </p>
-      <button id="showBtn">Auflösung anzeigen</button>
-      <div id="answer" class="lösung">
-        <strong>1. Rätsel:</strong> ZENITH<br />
-        <strong>2. Rätsel:</strong> FEINE SAHNE FISCHFILET 🎶
-      </div>
-    </div>
+  <div class="container">
+    <img src="HerzPuzzle.png" alt="Geburtstagsrätsel" />
+    <button id="showBtn">Auflösung</button>
+  </div>
+
+  <div id="answer" class="lösung">
+    <strong>1. Rätsel:</strong> ZENITH<br />
+    <strong>2. Rätsel:</strong> FEINE SAHNE FISCHFILET 🎶
   </div>
 
   <script>
