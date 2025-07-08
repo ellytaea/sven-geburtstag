@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Geburtstagsrätsel für meinen Schatz Sven zum 50.</title>
+  <style>
+    body { margin:0; padding:20px; background:#222; color:#fff; font-family:sans-serif;
+           display:flex; flex-direction:column; align-items:center; }
+    img { max-width:90vw; height:auto; box-shadow:0 0 20px rgba(0,0,0,0.8); }
+    .text { max-width:600px; margin-top:20px; text-align:center; }
+    button { margin-top:20px; padding:10px 20px; font-size:1rem; cursor:pointer; }
+    .lösung { display:none; max-width:600px; margin-top:20px;
+              padding:15px; background:#333; border-radius:5px; }
+  </style>
+</head>
+<body>
+  <h1>🎁 Geburtstagsrätsel für meinen Schatz Sven zum 50.</h1>
+  <img src="HerzPuzzle.png" alt="Geburtstagsrebus">
+  <div class="text">
+    Hallo Schatzi, kannst du herausfinden, was sich hier in zwei Rätseln versteckt?<br>
+    Nutze deine Brille, denk kreativ – und drück am Ende den Button für die Lösung.<br><br>
+    <strong>Aber nicht schummeln! 😉</strong>
+  </div>
+  <button id="showBtn">Auflösung anzeigen</button>
+  <div id="answer" class="lösung">
+    <strong>1. Rätsel:</strong> ZENITH<br>
+    <strong>2. Rätsel:</strong> FEINE SAHNE FISCHFILET 🎶
+  </div>
+
+  <script>
+    document.getElementById('showBtn').onclick = () => {
+      document.getElementById('answer').style.display = 'block';
+      document.getElementById('showBtn').style.display = 'none';
+    };
+  </script>
+</body>
+</html>
