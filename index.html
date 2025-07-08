@@ -18,7 +18,7 @@
     .wrapper {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: center; /* → vertikal zentriert */
       gap: 40px;
       flex-wrap: wrap;
       max-width: 1200px;
@@ -33,7 +33,7 @@
 
     .text-container {
       max-width: 400px;
-      text-align: left;
+      padding-left: 20px;
     }
 
     .text-container h1 {
@@ -79,6 +79,7 @@
       }
 
       .text-container {
+        padding-left: 0;
         text-align: center;
       }
     }
