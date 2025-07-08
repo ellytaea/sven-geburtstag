@@ -3,72 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <title>Geburtstagsrätsel für meinen Schatz Sven zum 50.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       background: #222;
       font-family: sans-serif;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .container {
-      position: relative;
-      text-align: center;
-      max-width: 100vw;
-    }
-    .container img {
-      width: 100%;
+    img {
+      max-width: 90vw;
+      max-height: 80vh;
       height: auto;
-      display: block;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
     }
-    .overlay {
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 90%;
+    .text, .lösung {
+      max-width: 600px;
+      text-align: center;
     }
-    .overlay h1 {
-      margin-top: 0;
-      font-size: 1.8em;
-    }
-    .overlay p {
-      margin: 10px 0;
+    .text {
+      margin-bottom: 20px;
     }
     button {
       margin-top: 10px;
       padding: 10px 20px;
-      font-size: 1em;
+      font-size: 1rem;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
+    }
+    button:hover {
+      background-color: #666;
     }
     .lösung {
       display: none;
-      margin: 20px auto;
-      max-width: 600px;
-      text-align: center;
       background: #333;
       padding: 15px;
       border-radius: 5px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="HerzPuzzle.png" alt="Geburtstagsrebus">
-    <div class="overlay">
-      <h1>🎁 Geburtstagsrätsel für meinen Schatz Sven zum 50.</h1>
-      <p>
-        Hallo Schatzi, kannst du herausfinden, was sich hier in zwei Rätseln versteckt?<br>
-        Nutze deine Brille, denk kreativ – und drück am Ende den Button für die Lösung.<br><br>
-        <strong>Aber nicht schummeln! 😉</strong>
-      </p>
-      <button id="showBtn">Auflösung anzeigen</button>
-    </div>
+  <img src="HerzPuzzle.png" alt="Geburtstagsrebus">
+  <div class="text">
+    <h1>🎁 Geburtstagsrätsel für meinen Schatz Sven zum 50.</h1>
+    <p>
+      Hallo Schatzi, kannst du herausfinden, was sich hier in zwei Rätseln versteckt?<br>
+      Nutze deine Brille, denk kreativ – und drück am Ende den Button für die Lösung.<br><br>
+      <strong>Aber nicht schummeln! 😉</strong>
+    </p>
+    <button id="showBtn">Auflösung anzeigen</button>
   </div>
-
   <div id="answer" class="lösung">
     <strong>1. Rätsel:</strong> ZENITH<br>
     <strong>2. Rätsel:</strong> FEINE SAHNE FISCHFILET 🎶
