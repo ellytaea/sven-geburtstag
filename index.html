@@ -29,21 +29,21 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     }
 
-    button {    
+    button {
   position: absolute;
-  left: 65%;
+  left: 85%;
   top: 82%;
-  transform: translateX(-50%);
-      padding: 10px 18px;
-      font-size: 1rem;
-      background-color: #b22222;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      opacity: 0.85;
-      transition: all 0.3s ease;
-    }
+  transform: translate(-50%, -50%);
+  padding: 10px 18px;
+  font-size: 1rem;
+  background-color: #b22222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
 
     button:hover {
       opacity: 1;
@@ -67,23 +67,22 @@
 }
 
     @media (max-width: 768px) {
-      button {
-        right: 20px;
-        bottom: 30px;
-        font-size: 0.85rem;
-        padding: 8px 14px;
-        border-radius: 6px;
-      }
-    }
+  button {
+    left: 82%;
+    top: 80%;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
 
-    @media (max-width: 480px) {
-      button {
-        right: 10px;
-        bottom: 20px;
-        font-size: 0.75rem;
-        padding: 6px 12px;
-      }
-    }
+@media (max-width: 480px) {
+  button {
+    left: 80%;
+    top: 78%;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
   </style>
 </head>
 <body>
